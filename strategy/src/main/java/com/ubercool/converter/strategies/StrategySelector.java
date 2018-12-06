@@ -15,11 +15,13 @@ public class StrategySelector {
 
   @Autowired
   public StrategySelector(List<ConverterStrategy> converterStrategies){
+    // Add all strategies to the map
     converterStrategies.stream().forEach(converterStrategy ->
         converterStrategyMap.put(converterStrategy.applicableFor(), converterStrategy));
   }
 
   public ConverterStrategy selectStrategy(Node node) {
+    // Select applicable strategy, can be more complex or based on other criteria
     return converterStrategyMap.get(node.getType());
   }
 }
