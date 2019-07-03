@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: "hazelcast-cache"
+
+cache:
+  hazelcast:
+    cloud:
+      enabled: false
+      service-name: ${spring.application.name}
+      namespace: ${OPENSHIFT_PROJECT_NAME:hazelcast-cache}
+    local:
+      network:
+        enabled: false
+      ip: 127.0.0.1
