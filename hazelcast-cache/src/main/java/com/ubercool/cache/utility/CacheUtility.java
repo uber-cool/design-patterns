@@ -25,7 +25,7 @@ public class CacheUtility {
   private Cache workflows;
 
   public Task getTaskFromCache(String taskId) {
-    return (Task) tasks.get(taskId).get();
+    return tasks.get(taskId, Task.class);
   }
 
   public void addTaskToCache(Task task){
@@ -33,7 +33,7 @@ public class CacheUtility {
   }
 
   public Workflow getWorkflowFromCache(String workflowId) {
-    return (Workflow) workflows.get(workflowId).get();
+    return workflows.get(workflowId, Workflow.class);
   }
 
   public void addWorkflowToCache(Workflow workflow){
@@ -41,7 +41,7 @@ public class CacheUtility {
   }
 
   public Operation getOperationFromCache(String operationId) {
-    return (Operation) operations.get(operationId).get();
+    return operations.get(operationId, Operation.class);
   }
 
   public void addOperationToCache(Operation operation){
