@@ -13,7 +13,7 @@
   <artifactId>hazelcast-cache</artifactId>
 
   <properties>
-    <hazelcast-version>3.9.3</hazelcast-version>
+    <hazelcast-version>4.0.5</hazelcast-version>
   </properties>
   <dependencies>
     <dependency>
